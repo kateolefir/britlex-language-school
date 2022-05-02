@@ -9,6 +9,7 @@
   --secondary-logo-color: #939393;
   --background-btn-hover: #414a4f;
   --label-background: #eeeeee;
+  --backdrop-background-color: rgb(128, 128, 128, 0.5);
 
   --time-animation: 250ms;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -566,3 +567,64 @@ body {
 .footer-link:focus {
   text-decoration: underline;
 }
+
+/*-----BACKDROP----*/
+.hero-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+  background-color: var(--backdrop-background-color);
+}
+
+.hero-backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero-backdrop > .hero-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  min-width: 820px;
+  min-height: 520px;
+
+  background-color: var(--secondary-background-color);
+  border-radius: 10px;
+
+  transform: translate(-50%, -50%);
+
+  box-shadow: 2px 3px 4px 0px rgba(38, 50, 56, 0.2);
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 34px;
+
+  color: var(--primary-title-color);
+  background-color: var(--secondary-background-color);
+  border-radius: 10px;
+  border: 1px solid var(--primary-title-color);
+
+  transform: translate(-10px, 10px);
+  transition: background-color var(--time-animation) var(--timing-function),
+    color var(--time-animation) var(--timing-function);
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  background-color: var(--background-btn-hover);
+  color: var(--button-title-color);
+}
+
+.hero-modal;

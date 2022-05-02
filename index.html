@@ -59,7 +59,7 @@
             With our teachers who write a program for each student, you will be
             able to make your first sketch after the first lesson.
           </p>
-          <button class="hero-btn" type="button">Get started</button>
+          <button class="hero-btn" type="button" data-modal-open>Get started</button>
         </div>
         <img
           src="./images/learning-languages.png"
@@ -263,6 +263,7 @@
         </div>
       </section>
     </main>
+    
   </body>
   
   <footer>
@@ -279,4 +280,13 @@
         </ul>
         </div>
   </footer>
+
+    <!-- backdrop -->
+    <div class="hero-backdrop is-hidden" data-modal>
+      <div class="hero-modal">
+        <button data-modal-close class="modal-close">exit</button>
+      </div>
+    </div>
+
+  <script src="./js/modal.js"></script>
 </html>
