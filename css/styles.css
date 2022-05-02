@@ -8,6 +8,7 @@
   --primary-logo-color: #000000;
   --secondary-logo-color: #939393;
   --background-btn-hover: #414a4f;
+  --label-background: #eeeeee;
 
   --time-animation: 250ms;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -56,6 +57,11 @@ address {
   font-style: normal;
 }
 
+*:hover,
+*:focus {
+  outline: none;
+}
+
 /*-----COMMON STYLES-----*/
 body {
   font-family: Poppins, sans-serif;
@@ -82,8 +88,8 @@ body {
   margin-top: 55px;
 }
 
-/*header logo*/
-.header-logo {
+/*logo*/
+.logo {
   margin-right: 228px;
   margin-top: 8px;
   margin-bottom: 8px;
@@ -93,15 +99,17 @@ body {
 
   cursor: pointer;
 
-  transition: text-shadow var(--time-animation) var(--timing-function);
+  transition: text-shadow var(--time-animation) var(--timing-function),
+    text-decoration var(--time-animation) var(--timing-function);
 }
 
-.header-logo:hover,
-.header-logo:focus {
+.logo:hover,
+.logo:focus {
   text-shadow: 1px 2px 1px rgba(38, 50, 56, 0.2);
+  text-decoration: underline;
 }
 
-.header-logo-style {
+.logo-style {
   color: var(--secondary-logo-color);
 }
 
@@ -363,4 +371,198 @@ body {
 .group-text {
   font-size: 20px;
   text-align: center;
+}
+
+/*-----PRICING-----*/
+.pricing-title {
+  margin-bottom: 60px;
+
+  font-weight: 600;
+  font-size: 48px;
+  color: var(--primary-logo-color);
+  text-align: center;
+}
+
+.pricing-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pricing-item {
+  position: relative;
+
+  width: 426px;
+  height: 584px;
+}
+
+.pricing-img {
+  margin-bottom: 31px;
+}
+
+.pricing-item-title {
+  margin-bottom: 20px;
+
+  font-weight: 600;
+  font-size: 30px;
+  color: var(--primary-title-color);
+}
+
+.pricing-text {
+  margin-bottom: auto;
+  font-size: 20px;
+}
+
+.price-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  padding: 5px 22.5px 4px 23px;
+
+  display: flex;
+  width: 260px;
+  height: 45px;
+
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 5px;
+  background-color: var(--label-background);
+}
+
+.price-label-primary {
+  color: var(--primary-title-color);
+  margin-bottom: 0;
+}
+
+.price-label-secondary {
+  font-size: 18px;
+  color: #546269;
+  margin-bottom: 0;
+}
+
+/*-----CONTACT US-----*/
+.contacts {
+  display: flex;
+  margin-bottom: 55px;
+
+  justify-content: space-between;
+}
+
+.contacts-title {
+  margin-bottom: 60px;
+
+  font-weight: 600;
+  font-size: 48px;
+  color: var(--primary-logo-color);
+}
+
+.contacts-text {
+  margin-bottom: 30px;
+
+  width: 654px;
+
+  font-size: 20px;
+}
+
+/*email-form*/
+.email-input {
+  margin-right: 30px;
+
+  padding: 20px 30px;
+  width: 425px;
+  height: 70px;
+
+  border: 1px solid var(--primary-text-color);
+  border-radius: 10px;
+
+  font-size: 16px;
+  line-height: 1.875;
+
+  cursor: pointer;
+
+  background-color: var(--primary-background-color);
+
+  transition: border var(--time-animation) var(--timing-function);
+}
+
+.email-btn {
+  padding: 20px 56px;
+  width: 312px;
+  height: 70px;
+
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--button-title-color);
+  text-align: center;
+
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  background-color: var(--button-color);
+
+  transition: box-shadow var(--time-animation) var(--timing-function),
+    background-color var(--time-animation) var(--timing-function);
+}
+
+.email-input:hover,
+.email-input:focus {
+  border: 2px solid var(--primary-text-color);
+}
+
+.email-btn:hover,
+.email-btn:focus {
+  box-shadow: 2px 3px 4px 0px rgba(38, 50, 56, 0.2);
+  background-color: var(--background-btn-hover);
+}
+
+/*-----FOOTER-----*/
+.footer {
+  position: relative;
+  margin-bottom: 55px;
+}
+.footer-section {
+  display: flex;
+  padding-top: 22px;
+
+  justify-content: space-between;
+}
+
+.footer-section::before {
+  content: "";
+
+  position: absolute;
+  top: 0px;
+
+  width: 1338px;
+  height: 1px;
+  background-color: #c4c4c4;
+}
+
+.footer-list {
+  display: flex;
+  align-items: center;
+}
+
+.footer-item:last-child {
+  margin-right: 0;
+}
+
+.footer-item {
+  margin-right: 80px;
+
+  letter-spacing: 0.02em;
+}
+
+.footer-link {
+  padding: 9px 0;
+
+  transition: text-decoration var(--time-animation) var(--timing-function);
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  text-decoration: underline;
 }
